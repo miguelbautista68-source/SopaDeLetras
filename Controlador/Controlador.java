@@ -29,11 +29,14 @@ public class Controlador {
         this.nombreSopa.add("perro");
         this.nombreSopa.add("juego");
         this.nombreSopa.add("camino");
-        this.nombreSopa.add("ingenieria");
+        this.nombreSopa.add("comida");
         this.nombreSopa.add("ferrocarril");
         this.nombreSopa.add("computacion");
         this.nombreSopa.add("futbol");
         this.nombreSopa.add("clase");
+        this.nombreSopa.add("carrera");
+        this.nombreSopa.add("archivo");
+        this.nombreSopa.add("celular");
     }
 
     /**
@@ -142,10 +145,10 @@ public class Controlador {
 
         Sopa encontrada = tablero.buscar(palabra);
         if (encontrada == null) {
-            return "La palabra \"" + palabra + "\" NO se encuentra en la cuadrícula.";
+            return "La palabra \"" + palabra + "\" no existe, verifica que este en la cadena";
         }
 
-        return "La palabra \"" + palabra + "\" SÍ está: empieza en el renglón "
+        return "La palabra \"" + palabra + "\" esta en fila "
                 + encontrada.getCoordenadaA() + ", columna "+
                 + encontrada.getCoordenadaB() + " y su dirección es "
                 + encontrada.getFlecha() + ".";

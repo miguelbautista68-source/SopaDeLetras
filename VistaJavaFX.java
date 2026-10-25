@@ -32,9 +32,9 @@ public class VistaJavaFX extends Application {
 
         // Encabezado superior
         VBox topBox = new VBox(10);
-        Label lblTitulo = new Label("SOPA DE LETRAS (20x20)");
+        Label lblTitulo = new Label("SOPA DE LETRAS");
         lblTitulo.setStyle("-fx-font-size: 20px; -fx-font-weight: bold;");
-        lblEstado = new Label("Haz clic en 'Generar y Guardar' para iniciar la sopa de letras.");
+        lblEstado = new Label("Ingresa un nombre al texto y despues busca una palabra");
         lblEstado.setStyle("-fx-font-size: 13px; -fx-text-fill: #2c3e50;");
         topBox.getChildren().addAll(lblTitulo, lblEstado);
         topBox.setAlignment(Pos.CENTER);
@@ -101,7 +101,7 @@ public class VistaJavaFX extends Application {
             Tablero tablero = controlador.generarTablero(FILAS_FIJAS, COLUMNAS_FIJAS, ruta);
             actualizarGridVisual(tablero);
 
-            String msj = "Sopa 20x20 generada y guardada en: " + ruta;
+            String msj = "La sopa de letras se ha generado segun: " + ruta;
             if (!controlador.getNoColocadas().isEmpty()) {
                 msj += " | No cupieron: " + controlador.getNoColocadas();
             }
@@ -114,7 +114,7 @@ public class VistaJavaFX extends Application {
     private void accionBuscar() {
         String palabra = txtPalabraBuscar.getText().trim();
         if (palabra.isEmpty()) {
-            lblEstado.setText("Escribe una palabra para buscar.");
+            lblEstado.setText("Escribe la palabra a buscar.");
             return;
         }
 
