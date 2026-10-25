@@ -17,10 +17,10 @@ public class Tablero {
     private int coordenadaB; // Columnas
     private Sopa[][] sopa;
 
-    // Ocho direcciones posibles de búsqueda y colocación.
-    // 1 derecha, 2 abajo, 3 izquierda, 4 arriba,
-    // 5 diagonal abajo-derecha, 6 arriba-derecha,
-    // 7 abajo-izquierda, 8 arriba-izquierda.
+    /*Defenimos segun la coordenada su direccion
+    1 derecha, 2 abajo, 3 izquierda, 4 arriba,
+     5 abajo-derecha, 6 arriba-derecha,
+     7 abajo-izquierda, 8 arriba-izquierda. */
     private static final int[][] DIRECCIONES = {
             {0, 1},
             {1, 0},

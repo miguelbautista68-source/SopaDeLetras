@@ -7,9 +7,7 @@ package org.uabc.ic.sopainterfaz.modelo;
  * 1 →, 2 ↓, 3 ←, 4 ↑, 5 ↘, 6 ↗, 7 ↙, 8 ↖ (0 = ninguna).
  */
 public class Sopa {
-    private static final String[] NOMBRES_DIRECCION = {"ninguna", "derecha", "abajo", "izquierda", "arriba",
-            "abajo a la derecha", "arriba a la derecha", "abajo a la izquierda", "arriba a la izquierda"};
-
+    private static final String[] FLECHAS = {"", "→", "↓", "←", "↑", "↘", "↗", "↙", "↖"};
     private int coordenadaA;
     private int coordenadaB;
     private char letra;
@@ -68,12 +66,11 @@ public class Sopa {
         this.direccion = direccion;
     }
 
-    /** Nombre de la dirección en palabras, por ejemplo "abajo a la derecha". */
-    public String getNombreDireccion() {
-        if (direccion < 0 || direccion >= NOMBRES_DIRECCION.length) {
-            return NOMBRES_DIRECCION[0];
+    public String getFlecha() {
+        if (direccion < 0 || direccion >= FLECHAS.length) {
+            return "";
         }
-        return NOMBRES_DIRECCION[direccion];
+        return FLECHAS[direccion];
     }
 
     public String toString(){

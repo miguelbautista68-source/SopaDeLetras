@@ -146,9 +146,9 @@ public class Controlador {
         }
 
         return "La palabra \"" + palabra + "\" SÍ está: empieza en el renglón "
-                + encontrada.getCoordenadaA() + ", columna "
+                + encontrada.getCoordenadaA() + ", columna "+
                 + encontrada.getCoordenadaB() + " y su dirección es "
-                + encontrada.getNombreDireccion() + " (" + encontrada.getDireccion() + ").";
+                + encontrada.getFlecha() + ".";
     }
 
     private int pedirEntero(String mensaje, int minimo, int maximo) {
