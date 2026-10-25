@@ -23,7 +23,7 @@ public class Controlador {
         this.rdm = new Random();
         this.teclado = new Scanner(System.in);
 
-        // Palabras por defecto
+        // Palabras de la sopa
         this.nombreSopa.add("avion");
         this.nombreSopa.add("carro");
         this.nombreSopa.add("perro");
